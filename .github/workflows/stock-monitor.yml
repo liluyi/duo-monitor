@@ -33,4 +33,4 @@ jobs:
       - name: Run monitor (30s polling for 12 min)
         env:
           NOTIFY_BARK_KEY: ${{ secrets.BARK_KEY }}
-        run: python3 iphone_duo_monitor.py --once --ci --parts MK2Q4CH/A,MK2P4CH/A,MK2T4CH/A,MK2U4CH/A
+        run: python3 iphone_duo_monitor.py --interval 30 --max-runtime 720 --ci --parts MK2Q4CH/A,MK2P4CH/A,MK2T4CH/A,MK2U4CH/A
